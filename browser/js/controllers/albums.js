@@ -16,3 +16,5 @@ app.controller('AlbumsCtrl', function ($scope, $rootScope, AlbumFactory, albums)
         }
     });
 });
+
+// could put the config / stateprovider in seperate file, links to it through the controller line. Will need to include the script tag to this file in index.html

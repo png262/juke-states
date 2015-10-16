@@ -20,13 +20,18 @@ app.controller('ArtistCtrl', function ($scope, $rootScope, PlayerFactory, Artist
         controller: 'ArtistCtrl',
         resolve: {
         	artist: function(ArtistFactory, $stateParams) {
-        		return ArtistFactory.fetchById($stateParams.artistId);
+        		return ArtistFactory.fetchById($stateParams.artistId); // won't see errors reported. may be good to wrap this in a try/catch block
         	}
         }
     })
     .state('artist.albums', {
     	url: '/albums',
-    	templateUrl: 'artist-albums.html'
+    	templateUrl: 'artist-albums.html' // this child can use the information resolved from the parent if we need to, in its own controller. Then we could reuse the albums.html template
+        /*
+            controller: function ($scope, artist){
+                $scope.albums = artist.albums;
+            }
+        */
     })
     .state('artist.songs', {
     	url: '/songs',
