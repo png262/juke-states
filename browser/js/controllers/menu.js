@@ -1,4 +1,4 @@
-app.controller('MenuCtrl', function ($scope, $rootScope) {
+app.controller('MenuCtrl', function ($scope, $rootScope, $location) {
 	$scope.viewAlbums = function ($) {
 		// $rootScope.$broadcast('changeView', {
 		// 	name: 'allAlbums'
@@ -10,4 +10,6 @@ app.controller('MenuCtrl', function ($scope, $rootScope) {
 			name: 'allArtists'
 		});
 	};
+
+	//console.log($location.path());
 });
