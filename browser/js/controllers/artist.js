@@ -30,7 +30,7 @@ app.controller('ArtistCtrl', function ($scope, $rootScope, PlayerFactory, Artist
     })
     .state('artist.songs', {
     	url: '/songs',
-    	templateUrl: 'artist-songs.html'
+    	templateUrl: '/artist-songs.html'
     })
 
 

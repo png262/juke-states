@@ -4,9 +4,10 @@ app.config(function($urlRouterProvider, $locationProvider) {
 
 	$urlRouterProvider.when('/', '/albums');
 
+
 	$locationProvider.html5Mode({
-  	enabled: true,
-  	requireBase: false
+	  	enabled: true,
+	  	requireBase: false
 	});
 
 
